@@ -2153,7 +2153,7 @@ var nginxKlDirectives = map[string][]uint{
 	},
 }
 
-func MatchNginxPlusLatest(directive string) ([]uint, bool) {
+func MatchNginxKl(directive string) ([]uint, bool) {
 	masks, matched := nginxKlDirectives[directive]
 	return masks, matched
 }
