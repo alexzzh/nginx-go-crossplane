@@ -15,7 +15,7 @@
 package crossplane
 
 //nolint:gochecknoglobals
-var nginxPlusLatestDirectives = map[string][]uint{
+var nginxKlDirectives = map[string][]uint{
 	"absolute_redirect": {
 		ngxHTTPMainConf | ngxHTTPSrvConf | ngxHTTPLocConf | ngxConfFlag,
 	},
@@ -2154,6 +2154,6 @@ var nginxPlusLatestDirectives = map[string][]uint{
 }
 
 func MatchNginxPlusLatest(directive string) ([]uint, bool) {
-	masks, matched := nginxPlusLatestDirectives[directive]
+	masks, matched := nginxKlDirectives[directive]
 	return masks, matched
 }
