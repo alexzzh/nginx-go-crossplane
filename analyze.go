@@ -252,7 +252,7 @@ func unionBitmaskMaps(maps ...map[string][]uint) map[string][]uint {
 // not provided. It is union of latest Nplus, Njs, and Otel.
 //
 //nolint:gochecknoglobals
-var defaultDirectives = unionBitmaskMaps(nginxPlusLatestDirectives, njsDirectives, otelDirectives)
+var defaultDirectives = unionBitmaskMaps(nginxKlDirectives, njsDirectives, otelDirectives)
 
 func DefaultDirectivesMatchFunc(directive string) ([]uint, bool) {
 	masks, matched := defaultDirectives[directive]
